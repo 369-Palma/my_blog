@@ -3,10 +3,16 @@ import { getPostData, getSortedPostsData } from "@/lib/posts"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
-
+/* Making the posts page static */
+export function generateStaticParams() {
+    const posts = getSortedPostsData() //deduped --> non manda la stessa richiesta di nuovo ma usa quella precedente
+    return posts.map((post) => ({
+        postId: post.id
+    }))
+}
 export function generateMetadata({params} : {params: {postId: string }}) {
 
-    const posts = getSortedPostsData() //deduped --> non manda la stessa richiesta di nuovo ma usa quella precedente
+    const posts = getSortedPostsData() //deduped
     const {postId} = params
 
     const post = posts.find(post => post.id === postId)
