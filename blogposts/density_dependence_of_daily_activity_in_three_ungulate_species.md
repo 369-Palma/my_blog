@@ -3,11 +3,13 @@ title: "Density dependence of daily activity in three ungulate species"
 date: "2021-05-01"
 ---
 
-**Abstract**
+
+***Abstract***
 
 Daily activity in herbivores reflects a balance between finding food and safety. The safety-in-numbers theory predicts that living in higher population densities increases safety, which should affect this balance. High-density populations are thus expected to show a more even distribution of activity—that is, spread—and higher activity levels across the day. We tested these predictions for three ungulate species; red deer (Cervus elaphus), roe deer (Capreolus capreolus), and wild boar (Sus scrofa). We used camera traps to measure the level and spread of activity across ten forest sites at the Veluwe, the Netherlands, that widely range in ungulate density. Food availability and hunting levels were included as covariates. Daily activity was more evenly distributed when population density was higher for all three species. Both deer species showed relatively more feeding activity in broad daylight and wild boar during dusk. Activity level increased with population density only for wild boar. Food availability and hunting showed no correlation with activity patterns. These findings indicate that ungulate activity is to some degree density dependent. However, while these patterns might result from larger populations feeling safer as the safety-in-numbers theory states, we cannot rule out that they are the outcome of greater intraspecific competition for food, forcing animals to forage during suboptimal times of the day. Overall, this study demonstrates that wild ungulates adjust their activity spread and level based on their population size.
 
 **1 INTRODUCTION**
+
 
 Daily activity patterns—the distribution of activity throughout day and night—are a key feature of animal responses to their environment (Rowcliffe et al., 2014). Activity adaptations allow animals to optimize fitness in a changing environment by balancing the need to secure resources and the need to avoid predation (Bridges et al., 2004; Brook et al., 2012; Kronfeld-Schor & Dayan, 2003; Levy et al., 2012). In addition, a variety of abiotic factors have been found to affect daily activity, including seasonality (Ikeda et al., 2016), day length (Vazquez et al., 2019), temperature (Bennie et al., 2014; McCann et al., 2017), precipitation, cloudiness, and moonlight (Beier & McCullough, 1990; Daltry et al., 1998). Hence, daily activity is a trait that can be adapted to a certain extent, to meet a diverse range of environmental pressures (Hayward & Slotow, 2009).
 
@@ -21,40 +23,51 @@ We studied whether the temporal spread and level of daily activity varied with p
 
 **2 MATERIALS AND METHODS**
 
-
-**2.1 Study area**
+***2.1 Study area***
 
 Fieldwork was conducted during June-October 2017 at the Veluwe, a 1,200 km2 forest-heathland complex located in the Netherlands (52°11′42″N 5°50′57″E; Figure 1), with an average annual precipitation of 850 mm/year and temperature of 10.5°C. The main soil types are xeric humic podzols and brown earths (Kuiters & Slim, 2002). Assemblages of ungulates vary across the Veluwe and mainly include red deer, roe deer, and wild boar (Ramirez, et al., 2021; Ramirez et al., 2018) with the deer species being crepuscular (Ikeda et al., 2016) and wild boar being a nocturnal species (Podgórski et al., 2013). In 2002, an average ungulate density of 14 individuals/km2 was reported for the Veluwe (Kuiters & Slim, 2002) and has increased since. The area is compartmentalized into seven units with contrasting wildlife management regimes and a wide range of ungulate densities. The Veluwe is highly disturbed by human activity, with a high resolution of walking and cycling trails and a series of dense infrastructure scattered across the entire area, leading us to assume an overall equal level of disturbance across our sites.
 
-**2.2 Sampling design**
+
+![Study area](/images/map.jpeg)
+
+**FIGURE 1**
+
+Research sites in the Veluwe, the Netherlands. The gray dots indicate research sites of 1 km2, dark green indicates forested areas and light green indicates nonforested areas. Ungulate trap rate per location is provided in Table 1.
+
+***2.2 Sampling design***
 
 Across seven management units, we selected ten sites that widely ranged in ungulate density, and also differed in hunting regimes and food availability (Table 1). The minimum distance between sites was 5 km. One contiguous square forest plot of 1 km2 was established in each site. Within each plot, 21 random points with at least 100 m interspacing were generated using ArcGIS (ESRI, 2012). At each sampling point, we measured ungulate activity and density with camera traps and food availability with vegetation plots.
 
-**2.3 Food availability**
+![table 1](/images/tabella1.png)
+
+***2.3 Food availability***
 
 To quantify food availability, vegetation plots were paired to the 21 camera points. Vegetation plots were positioned 3 m away from the camera, had a width of 4 m and a variable length to include 50 tree stems of 10–250 cm in height. Food availability was quantified as the density of broadleaved stems per m2, since broadleaved species are the preferred food source for our studied species (Ramirez, et al., 2021).
 
-**2.4 Ungulate density**
+***2.4 Ungulate density***
 
 In each site, three camera traps (Reconyx HyperFire HC500) were deployed for ~21 days at each random point, during June-October of 2017. Each 21 days, the three camera traps were moved to new points. This procedure was repeated until 21 points had been sampled. This yielded an average of 463 camera trap days per site (Table 1), enough to provide population estimates (Kays et al., 2009).
 
 Camera traps were mounted onto trees at 50 cm height, in steel enclosures with a security cable, facing north, and aimed parallel to the ground. Cameras were set to take bursts of ten images upon each trigger without delay. Vegetation > 50 cm directly in front of the camera was pruned to ensure a free view within the first three meters. Maximum detection distance was estimated at the time of placement as the maximum distance at which a person triggered the camera sensor, allowing to correct for differences in detection distances between camera traps.
 
 Images were grouped into sequences that represented separate animal detections, annotated and stored with the software Agouti (Casaer et al., 2019). The program considered independent visits if the time between triggers took longer than 3 min, this threshold is common for activity studies. For each sequence, species identity, number of individuals, time, and behavior were recorded. As a proxy for ungulate density, we calculated trap rates (ind m¯1 day¯1), defined as the number of ungulates recorded by the camera traps in proportion to the deployment duration of the camera and the maximum detection distance, as:
-urn:x-wiley:20457758:media:ece37570:ece37570-math-0001
+
+![Trap rate formula](/images/formula.png)
+
 where (A) is the total number of ungulates in the image sequences, (B) is the maximal detection distance of the camera in meters, and (C) is the sampling effort in days.
 
-**2.5 Activity patterns**
+***2.5 Activity patterns***
 
 Camera trap captures were grouped by hour of the day to quantify different activity patterns. The spread of activity over the day was calculated using the Shannon index (Shannon, 1948), which is a new approach compared with the use of other activity indicators such as activity level (Rowcliffe et al., 2014) or overlap (Meredith & Ridout, 2014). A higher index value corresponds to a greater spread over the day, that is, more constant activity. It should be noted that the spread itself is not automatically higher when there are more observations. This is because the spread is proportional to the timing of other observations and not to the total number of observations. For instance, a species may have large density difference between sites, but when all individual animals remain active on the exact same moments in time, this will not influence the spread of the activity over the day. Moreover, activity spread differs from activity overlap (Meredith & Ridout, 2014), in that a degree of overlap may indicate whether sites are different from one another, but does not show any directionality of the effect as can be done with an increasing or decreasing activity spread. Activity level was calculated from the circular kernel distribution as described in Rowcliffe et al. (2014) and is defined as the proportion of time spent active by the target species. Variation in day length was modest as all ten sites were surveyed simultaneously during a relatively short period and could therefore be ignored (Vazquez et al., 2019).
 
-**2.6 Hunting intensity**
+***2.6 Hunting intensity***
 
 Hunting intensity was quantified as the take-off density (ind km−2 year−1), based on official culling data (http://www.verenigingwildbeheerveluwe.nl/) (Table 1). This essentially corresponds to the density of shots fired rather than the proportion of individuals culled.
 
-**2.7 Statistical analyses**
+***2.7 Statistical analyses***
 
 A principal component analysis (PCA) supplemented with correlation tests was conducted (Perez, 2017) to test for association among fixed factors (ungulate trap rate, food availability, and hunting intensity) and to test for autocorrelation. Linear Models (LM) were used to test for the relationship between activity spread and level with the fixed factors. Analyses were done in R version 3.4.0 using the “vegan” and “activity” packages (Oksanen et al., 2013; R Core Team, 2021; Rowcliffe, 2016).
+
 
 
 **3 RESULTS**
@@ -63,6 +76,24 @@ The PCA showed large variation among fixed factors. The first principal componen
 
 The spread of daily activity varied widely across the ten sites (ranging from 1.47 to 3.02 H′), as illustrated for low and high abundance sites in Figure 2. For red deer and roe deer, activity peaked in the morning (between 4 and 7 hr) and the evening (between 16 and 21 hr), but these peaks were much more profound at the low-density site than at the high-density site (Figure 2a,b). For wild boar, activity peaked during the night (between 23 and 24 hr and between 0 and 4 hr) at sites with low density, but not at sites with high density (between 3–5 hr and between 20–23 hr; Figure 2c). The spread of activity increased with population density in all three species (Table 2; Figure 3). Activity level increased with population density only in wild boar (Table 2; Figure 3). Significance of relationships persisted when the highest and lowest-density site for red deer and wild boar were removed. Hunting intensity and food availability did not explain any additional variation in the spread or level of activity.
 
+
+![figure 2](/images/figure_2.jpg)
+
+**FIGURE 2**
+
+Daily activity patterns for three ungulate species at the Veluwe, the Netherlands, in the two sampled forest sites with the two most contrasting densities: high (black lines) and low (gray lines). (a) Red deer (Cervus elaphus) at Garderen and Gortel, (b) roe deer (Capreolus capreolus) at Hoenderloo and Buunderkamp, (c) wild boar (Sus scrofa) at Buunderkamp and Hoenderloo. See Table 1 for trap rate values. This figure is meant only for illustration purposes
+
+
+TABLE 2. Linear models of the relationship between the spread and level of activity in three ungulate species at the Veluwe, the Netherlands, and ungulate trap rate (ind m−1 day−1), hunting intensity (ind km−2 year−1), and food availability (broadleaved stems m−2)
+![table 2](/images/tabella2.png)
+
+Note
+Numbers given are the coefficient of determination (R2), sites (n), and absolute regression coefficients of the predictor variables. Significant coefficients are shown with (*).
+Significance p-value levels are indicated as: *(0.01 < x < 0.05), **(0.001 < x < 0.01), ***(x < 0.0001).
+
+![figure 3](/images/figure_3.jpg)
+**FIGURE 3** 
+Relations between activity spread and level with trap rate across ten forests at the Veluwe, the Netherlands, for three ungulate species. Lines are Log-Linear Model fits (Table 2) with confidence intervals. Solid lines represent significant and dashed lines nonsignificant relationships
 
 **4 DISCUSSION**
 
@@ -92,7 +123,6 @@ Our novel parameter—activity spread—accurately captured the variation in ung
 This work was supported and financed by the Graduate School for Production Ecology and Resource Conservation (PE&RC) and the Grant of the Ecology Fund of the Royal Netherlands Academy of Arts and Sciences. Access to forest areas was kindly granted and coordinated by management officers and staff members of Staatsbosbeheer, Kroondomein Het Loo, Cooperatie Bosgroep Midden Nederland, Geldersch Landschap en Kasteelen, and Gemeente Epe.
 
 **CONFLICT OF INTEREST**
-
 
 We declare to have no conflict of interests with this publication.
 

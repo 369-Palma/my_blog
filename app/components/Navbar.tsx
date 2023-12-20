@@ -14,7 +14,7 @@ export default function Navbar() {
                 <Link className="text-white/80 hover:text-white" href="https://github.com/369-Palma" target="_blank">
                     <FaGithub/>
                 </Link>
-                <Link className="text-white/80 hover:text-white" href="mailto:palmaiacobelli92@gmail.com" target="_blank">
+                <Link className="text-white/80 hover:text-white" href="/feedback"  /* href="mailto:palmaiacobelli92@gmail.com" target="_blank" */>
                     <FaEnvelope/>
                 </Link>
             </div>

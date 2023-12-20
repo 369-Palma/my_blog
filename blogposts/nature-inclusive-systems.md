@@ -5,7 +5,6 @@ date: "2023-12-19"
 
 **Context**
 
-
 This report has been produced by a team of Wageningen University master students as an Academic
 and Consultancy Training (ACT) project. This multidisciplinary group of students has been
 commissioned by the WINK (Waardevolle Informatie Natuurgedreven Kwaliteit) consortium. The WINK
