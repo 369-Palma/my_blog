@@ -1,5 +1,6 @@
 import Posts from "./components/Posts"
 
+export const revalidate = 10
 export default function Home() {
   return (
     <main className="bg-slate-800 mx-auto px-6 w-100">
