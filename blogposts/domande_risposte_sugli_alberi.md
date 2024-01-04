@@ -1,7 +1,10 @@
 ---
 title: "Domande e Risposte sulle Piante"
 date: "2024-01-03"
+<<<<<<< HEAD
 tags: ['nature', 'plants']
+=======
+>>>>>>> 3ea2c7f8f84e02d4f231af93f5001c909859c939
 ---
 
 **Cosa e come mangiano le piante?**
