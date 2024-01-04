@@ -1,6 +1,7 @@
 ---
 title: "Density dependence of daily activity in three ungulate species"
 date: "2021-05-01"
+tags: ['publication', 'ungulates']
 ---
 
 
