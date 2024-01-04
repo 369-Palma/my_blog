@@ -1,7 +1,6 @@
 ---
 title: "Nature Inclusive Systems"
 date: "2023-12-19"
-tags: ['agroforestry','agricolture', 'farming']
 ---
 
 **Context**

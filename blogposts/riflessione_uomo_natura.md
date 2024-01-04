@@ -1,10 +1,6 @@
 ---
 title: "Riflessione sulla connessione uomo natura"
 date: "2024-01-03"
-<<<<<<< HEAD
-tags: ['elementi','activities', 'stagioni', 'seasons']
-=======
->>>>>>> 3ea2c7f8f84e02d4f231af93f5001c909859c939
 ---
 
 **RICONOSCERSI PARTE DELLA NATURA DONA UN SIGNIFICATO PROFONDO ALL’ESISTENZA STESSA.**

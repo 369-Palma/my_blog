@@ -1,10 +1,6 @@
 ---
 title: "La Magica Avventura di Soffione, il Dente di Leone"
 date: "2024-01-02"
-<<<<<<< HEAD
-tags: ['denderlion','soffione', 'story', 'storiella']
-=======
->>>>>>> 3ea2c7f8f84e02d4f231af93f5001c909859c939
 ---
 
 

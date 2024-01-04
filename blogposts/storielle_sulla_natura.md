@@ -1,10 +1,6 @@
 ---
 title: "Storielle della Maestra Natura"
 date: "2024-01-03"
-<<<<<<< HEAD
-tags: ['stories','storielle', 'nature', 'bosco', 'wood']
-=======
->>>>>>> 3ea2c7f8f84e02d4f231af93f5001c909859c939
 ---
 
 **Il Bosco delle Amicizie Luminose**
