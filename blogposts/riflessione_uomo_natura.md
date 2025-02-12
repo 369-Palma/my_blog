@@ -1,6 +1,7 @@
 ---
 title: "Riflessione sulla connessione uomo natura"
 date: "2024-01-03"
+category: "insight"
 ---
 
 **RICONOSCERSI PARTE DELLA NATURA DONA UN SIGNIFICATO PROFONDO ALL’ESISTENZA STESSA.**

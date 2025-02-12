@@ -19,22 +19,16 @@ export default function Feedback() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs
-      .send(
-        "service_d3vhlvl", 
-        "template_j8faovd", 
-        data,
-        "3cG7_5IGDFHm5po4E" 
-      )
+      .send("service_d3vhlvl", "template_j8faovd", data, "3cG7_5IGDFHm5po4E")
       .then(
         () => {
-         /*  toast.success("Email inviata con successo! 📧"); */
-          setData(initState); 
+          /*  toast.success("Email inviata con successo! 📧"); */
+          setData(initState);
           router.push(`/thanks/`);
         },
         (error) => {
@@ -82,11 +76,17 @@ export default function Feedback() {
 
   const content = (
     <main className="text-white mx-auto prose prose-xl ">
+      <div className="flex mt-10 mb-5 justify-between border-b border-gray-600">
+        <h1 className="font-bold text-3xl mb-0 text-white">Contact Me</h1>
+        <Link href="/">
+          <FaHome className="dark:text-white/80 hover:text-white text-4xl mb-3 mt-0"></FaHome>
+        </Link>
+      </div>
       <form
         onSubmit={handleSubmit}
         className="text-white flex flex-col mx-auto max-w-3xl p-6"
       >
-        <h1 className="font-bold text-3xl mb-10 text-white">Contact Me</h1>
+        {/* <h1 className="font-bold text-3xl mb-10 text-white">Contact Me</h1> */}
 
         <label className="text-2xl mb-1" htmlFor="name">
           Name:
@@ -142,11 +142,6 @@ export default function Feedback() {
           Submit
         </button>
       </form>
-      <Link href="/">
-        <FaHome className="dark:text-white/80 hover:text-white text-4xl mb-10 mt-0">
-          {/* <Link href="/" className="underline"> Back to Home</Link> */}
-        </FaHome>
-      </Link>
     </main>
   );
 

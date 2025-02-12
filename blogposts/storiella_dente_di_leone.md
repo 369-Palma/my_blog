@@ -1,6 +1,7 @@
 ---
 title: "La Magica Avventura di Soffione, il Dente di Leone"
 date: "2024-01-02"
+category: "story"
 ---
 
 

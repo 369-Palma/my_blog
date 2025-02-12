@@ -1,6 +1,7 @@
 ---
 title: "Storielle della Maestra Natura"
 date: "2024-01-03"
+category: "story"
 ---
 
 **Il Bosco delle Amicizie Luminose**

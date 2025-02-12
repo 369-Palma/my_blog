@@ -7,17 +7,20 @@ type Props = {
 }
 
 export default function ListItems({post}: Props) {
-    const {id, title, date} = post
+    const {id, title, date, category} = post
 const formattedDate = getFormattedDate(date)
 
   return (
-    <li className="mt-4 text-2xl dark:text-white/90">
+    <li className="mt-4 text-2xl dark:text-white/90"> {/* dark:text-white/90 */}
         <Link 
         href={`/posts/${id}`}
-        className="underline hover:text-black/70 dark:hover:text-white"
+        className="text-green-300 hover:text-black/70 dark:hover:text-gray-300"
         > {title}</Link>
         <br/>
-        <p className="text-sm mt-1"> {formattedDate} </p>
+        <div className="w-full flex justify-between flex-col md:flex-row">
+          <p className="text-sm mt-3"> {formattedDate} </p>
+          <span className="text-sm text-gray-400 ts-italics mt-1 mr-5 border border-green-200 px-2 py-1 rounded-full tracking-wider"> {category?? null} </span>
+        </div>
     </li>
   )
 }

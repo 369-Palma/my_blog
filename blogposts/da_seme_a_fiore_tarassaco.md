@@ -1,6 +1,7 @@
 ---
 title: "Il Viaggio Incantato di Tarassaco"
 date: "2024-01-03"
+category: "story"
 ---
 
 C'era una volta un piccolo seme di Tarassaco che volava leggero nel cielo, cullato dalla dolce brezza del vento. Il suo viaggio lo portò a posarsi delicatamente sul terreno, avvolto dal suo piccolo paracadute bianco.

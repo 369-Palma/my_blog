@@ -1,6 +1,7 @@
 ---
 title: "Domande e Risposte sulle Piante"
 date: "2024-01-03"
+category: "education"
 ---
 
 **Cosa e come mangiano le piante?**

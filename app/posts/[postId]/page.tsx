@@ -38,7 +38,7 @@ export default async function Post({params} : {params: {postId: string }}) {
         return notFound()
     }
 
-    const {title, date, contentHtml} = await getPostData(postId)
+    const {title, date, category, contentHtml} = await getPostData(postId)
 
     const pubDate = getFormattedDate(date)
 
@@ -46,6 +46,7 @@ export default async function Post({params} : {params: {postId: string }}) {
         <main className="mt-10 px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
             <h1 className="text-3xl mt-4 mb-0"> {title} </h1>
             <p className="mt-0"> {pubDate}</p>
+            <span className="text-sm text-gray-400 ts-italics mt-1 mr-5 border border:gray-600 px-2 py-1 rounded-full text-center"> {category?? null} </span>
             <article>
                 <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
                 {/* <p>
