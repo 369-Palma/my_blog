@@ -22,7 +22,7 @@ export default function Home() {
           🌴
         </span>
       </p>
-      <p className="text-gray-300 text-center my-12 tracking-custom text-xl italic">Di cosa vuoi leggere oggi? <br/> Scegli la tua categoria!"</p>
+      <p className="text-gray-300 text-center my-12 tracking-custom text-xl italic">Di cosa vuoi leggere oggi? <br/> Scegli la tua categoria!</p>
       <section className="flex w-full text-xl text-white align-center justify-center gap-6 text-center flex-col md:flex-row ">
         <SingleCardCategory
           category={"stories"}
