@@ -10,7 +10,7 @@ export default function Greetings() {
         <Link href="/" className="underline"> Go Back Home</Link>
     </p> */}
     <Link href="/">
-    <FaHome className="dark:text-white/80 hover:text-white text-2xl mb-10 mt-0"> 
+    <FaHome className="dark:text-white/80 hover:text-white text-4xl mx-auto mt-6 "> 
         {/* <Link href="/" className="underline"> Back to Home</Link> */}
     </FaHome>
     </Link>

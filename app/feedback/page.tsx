@@ -1,115 +1,154 @@
-"use client"
+"use client";
 
-import { useState, FormEvent, ChangeEvent } from "react"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-import { FaHome } from "react-icons/fa"
+import { useState, FormEvent, ChangeEvent } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { FaHome } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const initState = {
-    name:"",
-    email: "",
-    message: "",
-}
+  name: "",
+  email: "",
+  message: "",
+};
 
-export default function Feedback(){
-const [data, setData] = useState(initState)
-const router = useRouter()
+export default function Feedback() {
+  const [data, setData] = useState(initState);
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(JSON.stringify(data))
-    const {name, email, message} = data
+    setLoading(true);
 
-
-/* SEND DATA TO API ROUTE */
-const res = await fetch(
-    `http://localhost:3000/api/feedback`,
-    {
-        method: "POST",
-        headers: {
-            "ContentType": "application/json",
+    emailjs
+      .send(
+        "service_d3vhlvl", 
+        "template_j8faovd", 
+        data,
+        "3cG7_5IGDFHm5po4E" 
+      )
+      .then(
+        () => {
+         /*  toast.success("Email inviata con successo! 📧"); */
+          setData(initState); 
+          router.push(`/thanks/`);
         },
-        body: JSON.stringify({
-            name, email, message
-        })
-    })
+        (error) => {
+          console.error("Errore nell'invio:", error);
+          toast.error("Errore nell'invio dell'email.");
+        }
+      )
+      .finally(() => setLoading(false));
+  };
 
-    // Navigate to thank you 
-    router.push(`/thanks/`)
-   
-}
+  /* const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(JSON.stringify(data));
+    const { name, email, message } = data;
 
-const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    //SEND DATA TO API ROUTE
+    const res = await fetch(`http://localhost:3000/api/feedback`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    });
 
-    const name = e.target.name
+    
+    router.push(`/thanks/`);
+  }; */
 
-    setData(prevData => ({
-        ...prevData,
-        [name]: e.target.value
-    }))
-}
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const name = e.target.name;
 
-const canSave = [...Object.values(data)].every(Boolean)
+    setData((prevData) => ({
+      ...prevData,
+      [name]: e.target.value,
+    }));
+  };
 
-const content = (
+  const canSave = [...Object.values(data)].every(Boolean);
+
+  const content = (
     <main className="text-white mx-auto prose prose-xl ">
-    <form onSubmit={handleSubmit} className="text-white flex flex-col mx-auto max-w-3xl p-6">
-
+      <form
+        onSubmit={handleSubmit}
+        className="text-white flex flex-col mx-auto max-w-3xl p-6"
+      >
         <h1 className="font-bold text-3xl mb-10 text-white">Contact Me</h1>
 
-        <label className="text-2xl mb-1" htmlFor="name">Name:</label>
+        <label className="text-2xl mb-1" htmlFor="name">
+          Name:
+        </label>
         <input
-            className="p-3 mb-6 text-2xl rounded-2xl text-black"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Jane"
-            pattern="([A-Z])[\w+.]{1,}"
-            value={data.name}
-            onChange={handleChange}
-            autoComplete="off"
-            autoFocus
+          className="p-3 mb-6 text-2xl rounded-2xl text-black"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Jane"
+          pattern="([A-Z])[\w+.]{1,}"
+          value={data.name}
+          onChange={handleChange}
+          autoComplete="off"
+          autoFocus
         />
 
-        <label className="text-2xl mb-1" htmlFor="email">Email:</label>
+        <label className="text-2xl mb-1" htmlFor="email">
+          Email:
+        </label>
         <input
-            className="p-3 mb-6 text-2xl rounded-2xl text-black"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Jane@yoursite.com"
-            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-            value={data.email}
-            onChange={handleChange}
-            autoComplete="off"
+          className="p-3 mb-6 text-2xl rounded-2xl text-black"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Jane@yoursite.com"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          value={data.email}
+          onChange={handleChange}
+          autoComplete="off"
         />
 
-        <label className="text-2xl mb-1" htmlFor="message">Message:</label>
+        <label className="text-2xl mb-1" htmlFor="message">
+          Message:
+        </label>
         <textarea
-            className="p-3 mb-6 text-2xl rounded-2xl text-black"
-            id="message"
-            name="message"
-            placeholder="Your message..."
-            rows={5}
-            cols={33}
-            value={data.message}
-            onChange={handleChange}
-            autoComplete="off"
+          className="p-3 mb-6 text-2xl rounded-2xl text-black"
+          id="message"
+          name="message"
+          placeholder="Your message..."
+          rows={5}
+          cols={33}
+          value={data.message}
+          onChange={handleChange}
+          autoComplete="off"
         />
 
         <button
-            className="p-3 mb-6 text-2xl rounded-2xl text-white border-solid border-white border-2 max-w-xs bg-slate-400 hover:cursor-pointer hover:bg-green-400 hover:text-slate-800 disabled:hidden"
-            disabled={!canSave}
-        >Submit</button>
-
-    </form>
-    <Link href="/">
-    <FaHome className="dark:text-white/80 hover:text-white text-2xl mb-10 mt-0"> 
-        {/* <Link href="/" className="underline"> Back to Home</Link> */}
-    </FaHome>
-    </Link>
+          className="p-3 mb-6 text-2xl rounded-2xl text-white border-solid border-white border-2 max-w-xs bg-slate-400 hover:cursor-pointer hover:bg-green-400 hover:text-slate-800 disabled:hidden"
+          disabled={!canSave}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+      <Link href="/">
+        <FaHome className="dark:text-white/80 hover:text-white text-4xl mb-10 mt-0">
+          {/* <Link href="/" className="underline"> Back to Home</Link> */}
+        </FaHome>
+      </Link>
     </main>
-)
+  );
 
-return content
+  return content;
 }

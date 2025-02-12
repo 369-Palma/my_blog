@@ -9,7 +9,7 @@ export default function Posts() {
     <h2 className="text-4xl font-bold dark:text-white/90">
         Blog
     </h2>
-    <ul className="w-full">
+    <ul className="w-full mb-6">
         {posts.map(post => (
             <ListItems key={post.id} post={post}/>
         ))}
